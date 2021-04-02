@@ -5,11 +5,9 @@ import { useState } from 'react'
 export function SortableTable ({tablePosts, isLoading}) {
 
     const useSortableData = (data, config = null) => {
-
         const [ sortConfig, setSortConfig ] = useState(config);
 
         const sortedData = React.useMemo(() => {
-
             let sortableData = [...data];
 
             if (sortConfig !== null) {
@@ -23,11 +21,9 @@ export function SortableTable ({tablePosts, isLoading}) {
                 });
             }
             return sortableData
-
         }, [data, sortConfig])
 
         const requestSort = key => {
-
             let direction = 'ascending';
 
             if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {

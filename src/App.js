@@ -15,21 +15,21 @@ function App() {
 
     fetch('https://jsonplaceholder.typicode.com/comments')
       .then(response => response.json())
-      .then(data => setTablePosts(data));
+      .then(data => setTablePosts(data))
+        .catch(err => alert(err.status + err.message));
 
     setIsLoading(false);
   },[]);
 
+  //Get currentPosts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = tablePosts.slice(indexOfFirstPost, indexOfLastPost);
 
+  //Change page
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
-    console.log(pageNumber)
   };
-  console.log(currentPosts)
-  console.log(currentPage)
 
 
 
