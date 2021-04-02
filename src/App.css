@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+body{
+    background-color: #3e3e3e;
+
+}
+.wrapper{
+    margin: 0 auto;
+
+    width: 80%;
+}
+.container{
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+
+}
+.container-d-b{
+    display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sortable-table{
+    background-color: white;
+    font-size: .9rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sortable-table, tr, th, td {
+    padding: .5rem;
+    border: 1px solid #d06e05;
+    border-collapse: collapse;
+}
+.sortable-table tr td:first-child{
+    text-align: center;
+    font-weight: bold;
+
+}
+.sortable-table th{
+    border: 1px solid #3e3e3e;
+    padding: 0;
+
+}
+.sortable-table caption{
+    font-size: 2rem;
+    color: #d06e05;
+    text-align: center;
+    padding-bottom: 1.25rem;
+}
+.sortable-table th button {
+    padding: .6rem 1.25rem;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: #d06e05;
+    transition: .3s all ease;
+}
+.sortable-table th button:hover{
+    background-color: #3e3e3e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pagination-list{
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
 }
+.pagination-list-item{
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination-list-item > button {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: #d06e05;
+    padding: .625rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.pagination-list-item > a:hover {
+    border-color: #d06e05;
+    background-color: white;
+    color: #3e3e3e;
+}
+.pagination-list-item > a:visited{
+    text-decoration: #3e3e3e;
 }
